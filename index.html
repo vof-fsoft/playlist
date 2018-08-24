@@ -12,6 +12,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelementplayer.min.css" media="handheld, only screen and (max-device-width:640px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/playlist/playlist.min.css"
         media="handheld, only screen and (max-device-width:640px)">
+
+    <script src="/playlist/assets/js/modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="/playlist/assets/js/headsmart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/playlist/playlist.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement-and-player.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#main_content').headsmart()
+            $('audio.main-playlist').mediaelementplayer({
+                "features": ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'current', 'progress', 'duration', 'volume', 'playlist'],
+                "audioVolume": "vertical",
+                "shuffle": false,
+                "loop": false
+            });
+        })
+    </script>
     <!-- Begin Jekyll SEO tag v2.5.0 -->
     <title>Welcome to FSOFT VOF PLaylist | playlist</title>
     <meta name="generator" content="Jekyll v3.7.3.1" />
@@ -28,7 +47,7 @@
 </head>
 
 <body>
-    <!-- <a id="forkme_banner" href="https://github.com/vof-fsoft/playlist">View on GitHub</a> -->
+    <a id="forkme_banner" href="https://vof-fsoft.github.io/playlist/">Contact Us</a>
     <div class="shell">
         <header>
             <span class="ribbon-outer">
@@ -74,28 +93,10 @@
                 <span class="left-tail"></span>
                 <span class="right-tail"></span>
             </span>
-            <!-- <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span> -->
+            <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p> -->
+        <span class="octocat"></span>
         </footer>
     </div>
 </body>
 
-<script src="/playlist/assets/js/modernizr.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
-<script src="/playlist/assets/js/headsmart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/playlist/playlist.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement-and-player.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#main_content').headsmart()
-        $('audio.main-playlist').mediaelementplayer({
-					"features": ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'current', 'progress', 'duration', 'volume', 'playlist'],
-					"audioVolume": "vertical", 
-					"shuffle": false,
-					"loop": false
-				});
-    })
-</script>
 </html>
